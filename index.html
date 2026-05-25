@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Mittal Electronics | Wholesaler of Electronics</title>
+  <!-- Google Fonts & Simple CSS Reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header & nav */
+    .site-header {
+      background: linear-gradient(135deg, #0b2b40 0%, #0f3b4f 100%);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .logo p {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: 0.2s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      border-bottom-color: #facc15;
+      color: #fde047;
+    }
+
+    /* sections */
+    .section {
+      padding: 4rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section:last-of-type {
+      border-bottom: none;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #0f3b4f;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #facc15;
+      border-radius: 4px;
+    }
+
+    /* cards, grids */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+      border: 1px solid #eef2ff;
+    }
+    .about-text {
+      flex: 2;
+    }
+    .about-highlight {
+      flex: 1;
+      background: #f1f5f9;
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    .contact-details {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #e2e8f0;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .contact-icon {
+      font-size: 1.4rem;
+      min-width: 2rem;
+    }
+    .contact-info {
+      font-size: 1.05rem;
+      word-break: break-word;
+    }
+    .contact-info a {
+      color: #0f3b4f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+      color: #b45309;
+    }
+    .map-placeholder {
+      background: #eef2ff;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+
+    .legal-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 2rem;
+    }
+    .legal-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0f3b4f;
+    }
+    .legal-card h4 {
+      font-size: 1.2rem;
+      margin: 1.2rem 0 0.5rem;
+      color: #1e293b;
+    }
+    .legal-card p, .legal-card li {
+      margin-bottom: 0.75rem;
+      color: #334155;
+    }
+    .legal-card ul {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background: #0b2b40;
+      color: #cbd5e1;
+      padding: 2rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #2d4a5e;
+      font-size: 0.85rem;
+    }
+
+    button, .btn {
+      background: #facc15;
+      color: #0f172a;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-outline-light {
+      background: transparent;
+      border: 1px solid #facc15;
+      color: #facc15;
+    }
+    .btn-outline-light:hover {
+      background: #facc15;
+      color: #0f172a;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+      .about-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <h1>⚡ Mittal Electronics</h1>
+      <p>Authorised Wholesaler | Since 2010</p>
+    </div>
+    <div class="nav-links">
+      <a href="#" data-nav="home" class="nav-link active">Home</a>
+      <a href="#" data-nav="about">About Us</a>
+      <a href="#" data-nav="contact">Contact</a>
+      <a href="#" data-nav="privacy">Privacy Policy</a>
+      <a href="#" data-nav="terms">Terms & Condition</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- HOME Section (Hero + intro) -->
+  <section id="home-section" class="section">
+    <div class="container">
+      <div style="background: linear-gradient(110deg, #ffffff 0%, #fef9e6 100%); border-radius: 2rem; padding: 2.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between;">
+          <div style="flex: 2;">
+            <span style="background: #facc15; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem; font-weight: bold;">Trusted Wholesaler</span>
+            <h1 style="font-size: 2.5rem; margin: 1rem 0 0.5rem; color: #0b2b40;">Mittal Electronics</h1>
+            <p style="font-size: 1.2rem; color: #334155; margin-bottom: 1rem;">Your one-stop wholesale partner for quality electronics in West Bengal.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <div><span style="font-weight: 700;">📞 Call Us:</span> <a href="tel:+919830148755" style="color:#0f3b4f;">9830148755</a></div>
+              <div><span style="font-weight: 700;">✉️ Email:</span> <a href="mailto:mittalinfo@gmail.com">mittalinfo@gmail.com</a></div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <a href="#" data-nav="contact" style="background:#0f3b4f; color:white; padding:0.6rem 1.8rem; border-radius:40px; text-decoration:none; display:inline-block; font-weight:600;">📦 Get Wholesale Quote</a>
+            </div>
+          </div>
+          <div style="flex:1; text-align:center; background:#eef2ff; padding:1.5rem; border-radius:2rem;">
+            <div style="font-size:3rem;">🏭⚡</div>
+            <p style="font-weight:600;">Electronic Goods Showroom<br>Hooghly, West Bengal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT Section -->
+  <section id="about-section" class="section" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">About Mittal Electronics</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p style="margin-bottom: 1rem; font-size: 1.05rem;"><strong>Established in the year 2010</strong>, Mittal Electronics has been a premier wholesaler and electronic goods showroom in Uttarpara, Hooghly district. With over a decade of excellence, we cater to retailers, businesses, and bulk buyers across West Bengal.</p>
+          <p style="margin-bottom: 1rem;">We specialize in supplying genuine electronic components, home appliances, gadgets, and accessories at competitive wholesale rates. Our commitment to quality, transparent pricing, and timely delivery has made us a trusted name in the region.</p>
+          <p>📍 <strong>Service area:</strong> Kolkata, Howrah, Hooghly, and surrounding districts. We welcome bulk orders and business partnerships.</p>
+        </div>
+        <div class="about-highlight">
+          <h3 style="color:#0f3b4f; margin-bottom:1rem;">Why choose us?</h3>
+          <ul style="list-style: none; padding-left: 0;">
+            <li>✅ 13+ Years of Trust</li>
+            <li>✅ Authorised Wholesale Dealer</li>
+            <li>✅ Wide range of electronics</li>
+            <li>✅ Competitive bulk pricing</li>
+            <li>✅ Strong dealer network</li>
+          </ul>
+          <p style="margin-top: 1rem;"><strong>📍 Head Office:</strong> 51/53 N.S.Road, Rishra, Hooghly - 712248</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT Section -->
+  <section id="contact-section" class="section" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem;">
+        <div class="contact-details">
+          <h3 style="margin-bottom: 1.2rem;">📞 Direct Contact</h3>
+          <div class="contact-row">
+            <div class="contact-icon">📱</div>
+            <div class="contact-info"><strong>Mobile:</strong> <a href="tel:+919830148755">+91 98301 48755</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info"><strong>Email:</strong> <a href="mailto:mittalinfo@gmail.com">mittalinfo@gmail.com</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div class="contact-info"><strong>Address:</strong><br> 51/53 N.S. Road, Rishra, Hooghly - 712248<br> West Bengal, India</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">🕒</div>
+            <div class="contact-info"><strong>Business Hours:</strong><br> Mon-Sat: 10:00 AM – 7:00 PM<br> Sunday: Closed</div>
+          </div>
+        </div>
+        <div class="contact-details">
+          <h3 style="margin-bottom: 1rem;">📍 Location Map (Approach)</h3>
+          <div class="map-placeholder">
+            <p><strong>51/53 N.S.Road, Rishra</strong><br> Hooghly, Pin: 712248<br> Landmark: Near Rishra Railway Station & GT Road</p>
+            <div style="background:#cbd5e1; height:120px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-top:10px; color:#1e293b; font-size:0.8rem;">📍 [Google Maps] - N.S. Road, Rishra, Hooghly</div>
+            <p style="margin-top: 12px; font-size:0.85rem;">For bulk inquiries, please call or email us. Visit our showroom for wholesale catalogue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY Section -->
+  <section id="privacy-section" class="section" style="display: none;">
+    <div class="container">
+      <div class="legal-card">
+        <h3>Privacy Policy</h3>
+        <p>At Mittal Electronics, your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website or contact us.</p>
+        <h4>Information We Collect</h4>
+        <p>We may collect personal details such as your name, email address, phone number, and business information when you voluntarily contact us for quotations or inquiries.</p>
+        <h4>How We Use Your Information</h4>
+        <p>We use the information to respond to your queries, process wholesale orders, provide customer support, and improve our services. We do not share, sell, or rent your personal data to third parties except as required by law.</p>
+        <h4>Data Security</h4>
+        <p>We implement reasonable security measures to protect your data. However, no electronic transmission is 100% secure. By using our services, you acknowledge this risk.</p>
+        <h4>Cookies</h4>
+        <p>Our website may use cookies to enhance user experience. You can adjust browser settings to decline cookies if preferred.</p>
+        <h4>Updates to Policy</h4>
+        <p>This policy may be revised from time to time. Last updated: March 2026. For any privacy concerns, reach out at mittalinfo@gmail.com.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS & CONDITIONS Section -->
+  <section id="terms-section" class="section" style="display: none;">
+    <div class="container">
+      <div class="legal-card">
+        <h3>Terms & Conditions</h3>
+        <p>Welcome to Mittal Electronics. By accessing our website or conducting business with us, you agree to comply with the following terms and conditions.</p>
+        <h4>1. Wholesale Transactions</h4>
+        <p>All products are sold on a wholesale basis to registered retailers, businesses, and bulk buyers. Minimum order quantities may apply. Prices are subject to change without prior notice.</p>
+        <h4>2. Payment & Pricing</h4>
+        <p>We accept bank transfers, cash (in-person), and other agreed modes. Invoices must be settled within the agreed credit period. All prices exclude GST unless stated.</p>
+        <h4>3. Shipping & Delivery</h4>
+        <p>Orders are processed within 2-3 business days. Delivery timelines depend on location. Risk of loss passes to buyer upon dispatch. We are not liable for courier delays.</p>
+        <h4>4. Returns & Warranty</h4>
+        <p>Defective products may be returned within 7 days subject to inspection. Warranty is provided as per manufacturer policies. No returns on 'bulk clearance' items.</p>
+        <h4>5. Limitation of Liability</h4>
+        <p>Mittal Electronics shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or services.</p>
+        <h4>6. Governing Law</h4>
+        <p>These terms are governed by the laws of West Bengal, India. Any disputes shall be subject to the exclusive jurisdiction of courts in Hooghly, West Bengal.</p>
+        <p>For complete T&C or clarifications, contact our sales team.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>⚡ Mittal Electronics – Your Trusted Electronic Wholesaler</div>
+      <div>📍 Rishra, Hooghly | 📞 9830148755</div>
+    </div>
+    <div class="copyright">
+      © 2026 Copyright by Mittal Electronics. All rights reserved. | Designed for wholesale excellence.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navigation handling: show/hide sections and active state
+  const sections = {
+    home: document.getElementById('home-section'),
+    about: document.getElementById('about-section'),
+    contact: document.getElementById('contact-section'),
+    privacy: document.getElementById('privacy-section'),
+    terms: document.getElementById('terms-section')
+  };
+
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function showSection(sectionId) {
+    // hide all sections
+    Object.values(sections).forEach(section => {
+      if (section) section.style.display = 'none';
+    });
+    // show selected section
+    if (sections[sectionId]) {
+      sections[sectionId].style.display = 'block';
+    } else {
+      // fallback to home
+      sections.home.style.display = 'block';
+    }
+    // update active class on nav
+    navLinks.forEach(link => {
+      const linkNav = link.getAttribute('data-nav');
+      link.classList.remove('active');
+      if ((linkNav === sectionId) || (linkNav === 'home' && sectionId === 'home')) {
+        link.classList.add('active');
+      }
+    });
+    // also scroll to top smoothly when changing page section
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Attach event listeners to navigation
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const navTarget = link.getAttribute('data-nav');
+      if (navTarget === 'home') showSection('home');
+      else if (navTarget === 'about') showSection('about');
+      else if (navTarget === 'contact') showSection('contact');
+      else if (navTarget === 'privacy') showSection('privacy');
+      else if (navTarget === 'terms') showSection('terms');
+    });
+  });
+
+  // Additional buttons that navigate to contact (quote)
+  const quoteButtons = document.querySelectorAll('a[href="#"][data-nav="contact"]');
+  quoteButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSection('contact');
+    });
+  });
+
+  // Also handle any other link that triggers contact (e.g., the 'Get Wholesale Quote' inside home)
+  const contactTriggers = document.querySelectorAll('[data-nav="contact"]');
+  contactTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      if(e.target.closest('a')) e.preventDefault();
+      showSection('contact');
+    });
+  });
+
+  // Default: show home section on page load
+  showSection('home');
+
+  // Also if there is any URL hash, simple enhancement:
+  if(window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    if (hash === 'privacy') showSection('privacy');
+    else if (hash === 'terms') showSection('terms');
+    else if (hash === 'contact') showSection('contact');
+    else if (hash === 'about') showSection('about');
+    else if (hash === 'home') showSection('home');
+  }
+</script>
+<!-- Additional inline to ensure contact details, copyright, address, email, mobile appear everywhere -->
+</body>
+</html>
